@@ -4,6 +4,7 @@
 @author: MarijaKostovska
 """
 
+from collections import deque
 eleves = {}
 eleves["Boris"] = ["Amir", "Franck", "Nathalie", "Bertrand"]
 eleves["Amir"] = []
@@ -24,11 +25,9 @@ eleves["Zack"] = []
 def personne_elue(name):
     return name == 'Zoureni'
 
-from collections import deque
-
 
 def search(name):
-	visitees = []
+  visitees = []
   search_queue = deque()
   search_queue += eleves[name]
   while search_queue:
